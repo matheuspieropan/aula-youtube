@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+//@RequestMapping("/transportadora")
 @RestController
-@RequestMapping("/transportadora")
 public class SemStrategyController {
 
     @GetMapping("/frete")
-    public Double obtemFrete(@RequestParam String transportadora) {
+    public Double obterFrete(@RequestParam String transportadora) {
         if (transportadora.equalsIgnoreCase("Jadlog")) {
             return 10.00;
         } else if (transportadora.equalsIgnoreCase("Camillo dos Santos")) {
