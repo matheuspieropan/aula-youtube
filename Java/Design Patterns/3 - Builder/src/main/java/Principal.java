@@ -5,8 +5,13 @@ import java.time.LocalDate;
 public class Principal {
 
     public static void main(String[] args) {
+        // SEM PADRÃO DE PROJETO
+
         new Pessoa(null, null, LocalDate.of(1996, 11, 12), 0);
         new Pessoa("Matheus", null, null, 0);
+
+
+        // COM PADRÃO IMPLEMENTADO
 
         Pessoa pessoaSoComNome = new Pessoa.PessoaBuilder()
                 .nome("Matheus")
