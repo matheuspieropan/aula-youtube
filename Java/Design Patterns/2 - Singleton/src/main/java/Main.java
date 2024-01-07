@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 public class Main {
 
     public static void main(String[] args) {
-        executar(false);
         executar(true);
     }
 
@@ -17,7 +16,7 @@ public class Main {
         LocalDateTime inicio = LocalDateTime.now();
 
         int contador = 0;
-        while (contador < 1000) {
+        while (contador < 10000) {
             salvarPessoa(comSingleton);
             contador++;
         }
