@@ -4,12 +4,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/exemplo")
-public class ExemploController {
+@RequestMapping("/preco")
+public class PrecoController {
 
     @GetMapping
-    public String exemplo() {
-        return "Deu tudo certo!!!";
+    public List<Double> exemplo() {
+        return List.of(Double.valueOf("10.0"), Double.valueOf("20.0"));
     }
 }
