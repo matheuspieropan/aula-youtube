@@ -20,7 +20,7 @@ public class ProdutoService {
 
     public Produto obterProduto() {
         CircuitBreaker circuitBreaker = circuitBreakerFactory.create("circuitbreaker");
-        String url = "http://localhost:8081/preco";
+        String url = "http://localhost:9090/ms-preco/preco";
 
         List<Double> historicoPrecos = (List<Double>) circuitBreaker.run(() ->
                 restTemplate.getForObject(url, List.class), throwable -> fallBack());

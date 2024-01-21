@@ -19,7 +19,7 @@ public class GlobalResilience4JConfiguration {
 
         // Tempo limite que Resilience4J aguarda para obter uma resposta
         TimeLimiterConfig timeLimiterConfig = TimeLimiterConfig.custom()
-                .timeoutDuration(Duration.ofSeconds(3))
+                .timeoutDuration(Duration.ofSeconds(10))
                 .build();
 
         CircuitBreakerConfig circuitBreakerConfig = CircuitBreakerConfig.custom()
