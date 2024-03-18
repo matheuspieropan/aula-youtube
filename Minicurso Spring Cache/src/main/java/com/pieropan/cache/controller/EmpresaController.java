@@ -19,6 +19,6 @@ public class EmpresaController {
 
     @GetMapping
     public ResponseEntity<List<Empresa>> findAll() {
-        return ResponseEntity.ok(empresaService.findAll());
+        return ResponseEntity.ok(empresaService.findAllComCache());
     }
 }
