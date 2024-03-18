@@ -22,7 +22,7 @@ public class CacheService {
         Objects.requireNonNull(cacheManager.getCache(cacheName)).clear();
     }
 
-    @CachePut("empresas")
+    @CachePut(value = "empresas", unless = "#result.size() <= 10000")
     public List<Empresa> atualizarCacheEmpresas() {
         return empresaService.findAll();
     }
