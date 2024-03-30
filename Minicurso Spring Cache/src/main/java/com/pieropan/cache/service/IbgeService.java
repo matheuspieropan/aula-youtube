@@ -16,6 +16,7 @@ public class IbgeService {
 
     @Cacheable(value = "estados", condition = "#estado.equalsIgnoreCase('MG')")
     public List<IbgeResponse> findAllCidades(String estado) {
+        System.out.println("vai buscar no IBGE");
         return ibge.findAllCidades(estado);
     }
 }

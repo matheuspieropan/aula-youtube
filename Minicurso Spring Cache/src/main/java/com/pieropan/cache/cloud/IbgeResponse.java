@@ -1,4 +1,6 @@
 package com.pieropan.cache.cloud;
 
-public record IbgeResponse(int id, String nome) {
+import java.io.Serializable;
+
+public record IbgeResponse(int id, String nome) implements Serializable {
 }
