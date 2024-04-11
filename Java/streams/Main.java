@@ -9,8 +9,25 @@ public class Main {
 
     public static void main(String[] args) {
         List<UsuarioRequestDto> usuariosRequest = usuariosRequest();
-        //usuariosRequest.stream().filter(new MeuPredicate()).toList().forEach(System.out::println);
-        usuariosRequest.stream().filter(u -> u.idade() >=18).toList().forEach(System.out::println);
+
+        usuariosRequest.stream()
+                .forEach(new MeuConsumer());
+
+        usuariosRequest.stream()
+                .forEach(u -> System.out.println());
+
+        usuariosRequest.stream()
+                .map(new MinhaFunction()).toList().forEach(System.out::println);
+
+        usuariosRequest.stream()
+                .map(u -> new UsuarioResponseDto(u.nome(), u.email(), u.idade())).toList().forEach(System.out::println);
+
+
+        usuariosRequest.stream()
+                .filter(new MeuPredicate()).toList().forEach(System.out::println);
+
+        usuariosRequest.stream()
+                .filter(u -> u.idade() >= 18).toList().forEach(System.out::println);
     }
 
     // Utilizado no Stream.generate
