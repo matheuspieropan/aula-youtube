@@ -1,8 +1,8 @@
-package com.pieropan.integracao.controller;
+package com.pieropan.unitario.controller;
 
-import com.pieropan.integracao.dto.UsuarioRequest;
-import com.pieropan.integracao.dto.UsuarioResponse;
-import com.pieropan.integracao.service.UsuarioService;
+import com.pieropan.unitario.dto.UsuarioRequest;
+import com.pieropan.unitario.dto.UsuarioResponse;
+import com.pieropan.unitario.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

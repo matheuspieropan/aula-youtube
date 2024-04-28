@@ -1,6 +1,6 @@
-package com.pieropan.integracao.dto;
+package com.pieropan.unitario.dto;
 
-import com.pieropan.integracao.entity.Usuario;
+import com.pieropan.unitario.entity.Usuario;
 
 public record UsuarioRequest(String nome, String email, String senha, int idade) {
 

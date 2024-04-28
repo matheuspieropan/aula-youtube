@@ -1,4 +1,4 @@
-package com.pieropan.integracao.entity;
+package com.pieropan.unitario.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
