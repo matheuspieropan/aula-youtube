@@ -21,12 +21,16 @@ public class UsuarioService {
         return UsuarioResponse.toUsuarioResponse((List<Usuario>) usuarioRepository.findAll());
     }
 
+    public UsuarioResponse buscarPorId(Long id) {
+        return UsuarioResponse.toUsuarioResponse(usuarioRepository.findById(id).orElseThrow());
+    }
+
     public UsuarioResponse salvar(UsuarioRequest usuario) {
         if (usuario.idade() < 18) {
             throw new MenorIdadeException("Não é permitido o cadastro para menor de idade!");
         }
 
-        if(usuario.senha().contains("123")){
+        if (usuario.senha().contains("123")) {
             throw new SenhaInvalidaException("Senha não permitida!");
         }
 
