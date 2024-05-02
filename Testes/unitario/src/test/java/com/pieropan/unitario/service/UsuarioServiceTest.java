@@ -24,7 +24,6 @@ import static org.mockito.Mockito.lenient;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class UsuarioServiceTest {
@@ -38,7 +37,7 @@ class UsuarioServiceTest {
     @BeforeEach
     public void setUp() {
         Usuario usuario = new Usuario(1L, "Matheus", "matheus@dev.com", "dsjndfjnfd", 18);
-        when(usuarioRepository.findById(1L)).thenReturn(Optional.of(usuario));
+        lenient().when(usuarioRepository.findById(1L)).thenReturn(Optional.of(usuario));
         lenient().when(usuarioRepository.findAll()).thenReturn(Collections.singletonList(usuario));
     }
 
