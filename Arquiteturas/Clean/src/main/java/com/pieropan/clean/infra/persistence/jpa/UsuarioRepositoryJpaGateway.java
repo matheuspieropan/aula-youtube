@@ -1,15 +1,17 @@
-package com.pieropan.clean.infra.persistence;
+package com.pieropan.clean.infra.persistence.jpa;
 
 import com.pieropan.clean.domain.Usuario;
-import com.pieropan.clean.gateway.UsuarioGateway;
+import com.pieropan.clean.gateway.UsuarioRepositoryGateway;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-public class UsuarioGatewayImpl implements UsuarioGateway {
+@Component
+public class UsuarioRepositoryJpaGateway implements UsuarioRepositoryGateway {
 
     private final UsuarioRepository usuarioRepository;
 
-    public UsuarioGatewayImpl(UsuarioRepository usuarioRepository) {
+    public UsuarioRepositoryJpaGateway(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
 

@@ -1,15 +1,15 @@
 package com.pieropan.clean.application;
 
 import com.pieropan.clean.domain.Usuario;
-import com.pieropan.clean.gateway.UsuarioGateway;
+import com.pieropan.clean.gateway.UsuarioRepositoryGateway;
 
 import java.util.List;
 
 public class UsuarioUseCase {
 
-    private final UsuarioGateway usuarioGateway;
+    private final UsuarioRepositoryGateway usuarioGateway;
 
-    public UsuarioUseCase(UsuarioGateway usuarioGateway) {
+    public UsuarioUseCase(UsuarioRepositoryGateway usuarioGateway) {
         this.usuarioGateway = usuarioGateway;
     }
 
