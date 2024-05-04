@@ -1,6 +1,6 @@
 package com.pieropan.clean.domain;
 
-import com.pieropan.clean.infra.persistence.UsuarioEntity;
+import com.pieropan.clean.infra.persistence.jpa.UsuarioEntity;
 
 import java.util.List;
 

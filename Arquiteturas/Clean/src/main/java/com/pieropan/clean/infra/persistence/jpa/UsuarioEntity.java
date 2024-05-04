@@ -1,4 +1,4 @@
-package com.pieropan.clean.infra.persistence;
+package com.pieropan.clean.infra.persistence.jpa;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
