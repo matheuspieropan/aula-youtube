@@ -5,17 +5,18 @@ import com.pieropan.clean.infra.dto.UsuarioResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UsuarioService {
 
-    private final UsuarioUseCase usuarioUseCase;
+    private final Map<String, UsuarioUseCase> usuarioUseCaseMap;
 
-    public UsuarioService(UsuarioUseCase usuarioUseCase) {
-        this.usuarioUseCase = usuarioUseCase;
+    public UsuarioService(Map<String, UsuarioUseCase> usuarioUseCaseMap) {
+        this.usuarioUseCaseMap = usuarioUseCaseMap;
     }
 
-    public List<UsuarioResponse> findAll() {
-        return UsuarioResponse.UsuarioResponse(usuarioUseCase.findAll());
+    public List<UsuarioResponse> findAll(String tipo) {
+        return UsuarioResponse.UsuarioResponse(usuarioUseCaseMap.get(tipo).findAll());
     }
 }
