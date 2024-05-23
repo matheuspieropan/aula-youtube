@@ -16,4 +16,11 @@ public class UsuarioUseCase {
     public List<Usuario> findAll() {
         return usuarioGateway.findAll();
     }
+
+    public Usuario save(Usuario usuario) {
+        if (usuario.senha().contains("123")) {
+            throw new RuntimeException("Senha inválida!");
+        }
+        return usuarioGateway.save(usuario);
+    }
 }

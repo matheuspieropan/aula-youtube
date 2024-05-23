@@ -19,4 +19,10 @@ public class UsuarioRepositoryJpaGateway implements UsuarioRepositoryGateway {
     public List<Usuario> findAll() {
         return Usuario.toUsuario((List<UsuarioEntity>) usuarioRepository.findAll());
     }
+
+    @Override
+    public Usuario save(Usuario usuario) {
+        UsuarioEntity usuarioEntity = Usuario.toUsuarioEntity(usuario);
+        return Usuario.toUsuario(usuarioRepository.save(usuarioEntity));
+    }
 }

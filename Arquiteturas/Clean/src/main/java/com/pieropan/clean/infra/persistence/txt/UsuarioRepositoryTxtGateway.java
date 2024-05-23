@@ -30,4 +30,9 @@ public class UsuarioRepositoryTxtGateway implements UsuarioRepositoryGateway {
 
         return usuarios;
     }
+
+    @Override
+    public Usuario save(Usuario usuario) {
+        return null;
+    }
 }

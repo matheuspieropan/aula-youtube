@@ -1,9 +1,12 @@
 package com.pieropan.clean.infra;
 
+import com.pieropan.clean.infra.dto.UsuarioRequest;
 import com.pieropan.clean.infra.dto.UsuarioResponse;
 import com.pieropan.clean.infra.service.UsuarioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,5 +26,10 @@ public class UsuarioController {
     @GetMapping
     private ResponseEntity<List<UsuarioResponse>> findAll(@RequestParam("tipo") String tipo) {
         return ResponseEntity.ok(usuarioService.findAll(tipo));
+    }
+
+    @PostMapping
+    public ResponseEntity<UsuarioResponse> save(@RequestBody UsuarioRequest usuarioRequest) {
+        return ResponseEntity.status(201).body(usuarioService.save(usuarioRequest));
     }
 }

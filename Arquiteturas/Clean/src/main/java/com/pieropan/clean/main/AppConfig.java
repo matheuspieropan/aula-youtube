@@ -11,12 +11,12 @@ import org.springframework.context.annotation.Primary;
 public class AppConfig {
 
     @Bean("txt")
-    @Primary
     public UsuarioUseCase usuarioUseCaseComTxt(UsuarioRepositoryTxtGateway usuarioRepositoryTxtGateway) {
         return new UsuarioUseCase(usuarioRepositoryTxtGateway);
     }
 
     @Bean("jpa")
+    @Primary
     public UsuarioUseCase usuarioUseCaseComJpa(UsuarioRepositoryJpaGateway usuarioGateway) {
         return new UsuarioUseCase(usuarioGateway);
     }

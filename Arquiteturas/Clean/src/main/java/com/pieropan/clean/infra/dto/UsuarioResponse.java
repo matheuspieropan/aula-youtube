@@ -6,7 +6,7 @@ import java.util.List;
 
 public record UsuarioResponse(Long id, String nome, String email) {
 
-    public static List<UsuarioResponse> UsuarioResponse(List<Usuario> usuarios) {
+    public static List<UsuarioResponse> toUsuarioResponseList(List<Usuario> usuarios) {
         return usuarios.stream().map(UsuarioResponse::toUsuarioResponse).toList();
     }
 

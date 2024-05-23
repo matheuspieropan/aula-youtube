@@ -13,4 +13,8 @@ public record Usuario(Long id, String nome, String email, String senha) {
     public static Usuario toUsuario(UsuarioEntity usuario) {
         return new Usuario(usuario.getId(), usuario.getNome(), usuario.getEmail(), usuario.getSenha());
     }
+
+    public static UsuarioEntity toUsuarioEntity(Usuario usuario) {
+        return new UsuarioEntity(usuario.id, usuario.nome, usuario.email, usuario.senha);
+    }
 }

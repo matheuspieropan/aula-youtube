@@ -7,4 +7,6 @@ import java.util.List;
 public interface UsuarioRepositoryGateway {
 
     List<Usuario> findAll();
+
+    Usuario save(Usuario usuario);
 }
