@@ -1,2 +1,0 @@
-1;Matheus;matheus@dev.com;qualquersenha
-2;Lucas;lucas@dev.com;123

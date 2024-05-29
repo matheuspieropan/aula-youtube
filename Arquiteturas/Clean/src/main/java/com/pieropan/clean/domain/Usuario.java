@@ -10,6 +10,10 @@ public record Usuario(Long id, String nome, String email, String senha) {
         return usuarios.stream().map(Usuario::toUsuario).toList();
     }
 
+    public static Usuario toUsuario(Usuario usuario, Long id) {
+        return new Usuario(id, usuario.nome(), usuario.email(), usuario.senha());
+    }
+
     public static Usuario toUsuario(UsuarioEntity usuario) {
         return new Usuario(usuario.getId(), usuario.getNome(), usuario.getEmail(), usuario.getSenha());
     }
