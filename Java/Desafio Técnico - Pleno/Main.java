@@ -36,9 +36,9 @@ public class Main {
             Connection connection = ConexaoSingleton.getInstance().getConnection();
             connection.setAutoCommit(false);
 
-            criarEndereco(connection, criarCliente(connection));
+            int idCliente = criarCliente(connection);
+            criarEndereco(connection, idCliente);
             connection.commit();
-
         } catch (SQLException ex) {
             System.out.println("Não foi possível inserir registro!");
         }
