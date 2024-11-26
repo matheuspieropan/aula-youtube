@@ -1,0 +1,6 @@
+public enum StatusPedido {
+    PENDENTE_PAGAMENTO,
+    PAGAMENTO_APROVADO,
+    EM_TRANSPORTE,
+    ENTREGUE
+}
